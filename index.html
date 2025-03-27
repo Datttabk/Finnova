@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNOVA - AI Financial Assistant</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1a1a2e; /* Dark blue background */
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00b894;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 5px #00b894, 0 0 10px #00b894;
+        }
+
+        .nav-buttons .btn {
+            background: #00b894;
+            border: none;
+            padding: 10px 18px; /* Smaller padding */
+            margin-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px; /* Smaller font size */
+            transition: all 0.3s ease;
+        }
+
+        .nav-buttons .btn:hover {
+            background: #00997b;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #00b894;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px #00b894, 0 0 20px #00b894;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px; /* Fixed width for all cards */
+            text-align: center;
+            box-shadow: 0 0 15px #00b894;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px #00b894;
+        }
+
+        /* Card Headings */
+        .card h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #00b894;
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis if text overflows */
+        }
+
+        .card p {
+            font-size: 16px;
+            margin: 15px 0;
+            color: #ccc;
+        }
+
+        .card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #00b894;
+        }
+
+        /* Buttons inside cards */
+        .card .action-btn {
+            background: #00b894;
+            border: none;
+            padding: 10px 18px; /* Consistent padding */
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 14px; /* Consistent font size */
+            transition: all 0.3s ease;
+            width: 100%; /* Full width for consistency */
+            display: inline-block; /* Ensure buttons are the same size */
+            text-align: center; /* Center text */
+        }
+
+        .card .action-btn:hover {
+            background: #00997b;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #00b894;
+        }
+
+        /* Chatbot Card */
+        .chatbot-card {
+            margin-top: 80px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            margin-top: 100px;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 40px 20px;
+            border-radius: 15px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            box-shadow: 0 0 15px #00b894;
+        }
+
+        .about-us h2 {
+            color: #00b894;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px #00b894;
+        }
+
+        .about-item p {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">FINNOVA</div>
+        <div class="nav-buttons">
+           <h5>YOUR TRUSTED INVESTMENT </h5>
+           <H5>PARTNER</H5>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="hero">
+        <h1>Welcome to FINNOVA</h1>
+        <p>Your AI-Powered Financial Assistant</p>
+
+        <!-- Button Section -->
+        <div class="button-container">
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Stock Predictor</h3>
+                <p>AI-powered predictions for better investments.</p>
+                <a href="https://stock-predictor-3.onrender.com" target="_blank">
+                    <button class="action-btn">Try Now</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-coins"></i>
+                <h3>Portfolio Optimization</h3>
+                <p>Optimize your investments for maximum returns.</p>
+                <button class="action-btn">Optimize</button>
+            </div>
+        </div>
+
+        <!-- Chatbot Button -->
+        <div class="button-container">
+            <div class="card chatbot-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI FINANCE GURU</h3>
+                <p>Get instant financial insights with AI.</p>
+                <button class="action-btn">Chat Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <div class="about-item">
+            <p>FINNOVA is your AI-powered financial assistant, designed to help you make smarter investment decisions. With tools like stock predictions, portfolio optimization, and an AI FINANCE GURU, we provide real-time insights to maximize your financial growth.</p>
+        </div>
+    </section>
+</body>
+</html>
